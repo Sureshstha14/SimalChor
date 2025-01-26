@@ -1,13 +1,15 @@
 {
   "name": "my-v0-project",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next build && next export",
+  "deploy": "npm run export && gh-pages -d out"
+}
+,
   "dependencies": {
     "@emailjs/browser": "latest",
     "@hookform/resolvers": "^3.9.1",
